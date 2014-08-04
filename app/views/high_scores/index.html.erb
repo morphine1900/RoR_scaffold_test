@@ -1,0 +1,33 @@
+<h1>Listing high_scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Name</th>
+      <th>Email address</th>
+      <th>Date of birth</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @high_scores.each do |high_score| %>
+      <tr>
+        <td><%= high_score.username %></td>
+        <td><%= high_score.password %></td>
+        <td><%= high_score.name %></td>
+        <td><%= high_score.email_address %></td>
+        <td><%= high_score.date_of_birth %></td>
+        <td><%= link_to 'Show', high_score %></td>
+        <td><%= link_to 'Edit', edit_high_score_path(high_score) %></td>
+        <td><%= link_to 'Destroy', high_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New High score', new_high_score_path %>

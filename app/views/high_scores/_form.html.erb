@@ -1,0 +1,37 @@
+<%= form_for(@high_score) do |f| %>
+  <% if @high_score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@high_score.errors.count, "error") %> prohibited this high_score from being saved:</h2>
+
+      <ul>
+      <% @high_score.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email_address %><br>
+    <%= f.text_field :email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br>
+    <%= f.text_field :date_of_birth %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

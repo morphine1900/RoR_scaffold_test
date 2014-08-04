@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @high_score.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @high_score.password %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @high_score.name %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @high_score.email_address %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @high_score.date_of_birth %>
+</p>
+
+<%= link_to 'Edit', edit_high_score_path(@high_score) %> |
+<%= link_to 'Back', high_scores_path %>
